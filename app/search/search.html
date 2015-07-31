@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <form id="searchform" name="searchform">
+            <div class="col-md-1">
+                <div class="form-group big-text text-center search-bar">
+                    From
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="form-control input-lg z-depth-1 big-text" type="text" name="name" value="" placeholder="London" ng-model="vm.from">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group big-text text-center search-bar">
+                    To
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="form-control input-lg z-depth-1 big-text" type="text" name="name" value="" placeholder="Paris" ng-model="vm.to">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group big-text text-center search-bar">
+                    <button type="buton" class="btn btn-default btn-lg" ng-click="vm.search()" ng-disabled="searchform.$invalid"><i class="fa fa-search"></i> Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map-canvas"></div>
+        </div>
+        </row>
+    </div>
+</div>

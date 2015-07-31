@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row" ng-repeat="movie in vm.result" ng-if="$index % 3 == 0">
+        <div class="col-md-4 movie-item">
+            <div style="max-height: 200px; overflow: hidden">
+                <a href="{{vm.result[$index].imdbUrl}}">
+                    <img class="img-responsive" ng-src="{{vm.result[$index].image}}" alt="" />
+                </a>
+            </div>
+            <h3>
+                <a href="{{vm.result[$index].imdbUrl}}">{{vm.result[$index].title}}</a>
+            </h3>
+            <p>Runtime {{vm.result[$index].runtimeOriginal}}
+                <br />IMDB Votes {{vm.result[$index].imdbVotes}}</p>
+        </div>
+        <div class="col-md-4 movie-item">
+            <div style="max-height: 200px; overflow: hidden">
+                <a href="{{vm.result[$index+1].imdbUrl}}">
+                    <img class="img-responsive" ng-src="{{vm.result[$index+1].image}}" alt="" />
+                </a>
+            </div>
+            <h3>
+                <a href="{{vm.result[$index+1].imdbUrl}}">{{vm.result[$index+1].title}}</a>
+            </h3>
+            <p>Runtime {{vm.result[$index+1].runtimeOriginal}}
+                <br />IMDB Votes {{vm.result[$index+1].imdbVotes}}</p>
+        </div>
+        <div class="col-md-4 movie-item">
+            <div style="max-height: 200px; overflow: hidden">
+                <a href="{{vm.result[$index+2].imdbUrl}}">
+                    <img class="img-responsive" ng-src="{{vm.result[$index+2].image}}" alt="" />
+                </a>
+            </div>
+            <h3>
+                <a href="{{vm.result[$index+2].imdbUrl}}">{{vm.result[$index+2].title}}</a>
+            </h3>
+            <p>Runtime {{vm.result[$index+2].runtimeOriginal}}
+                <br />IMDB Votes {{vm.result[$index+2].imdbVotes}}</p>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>

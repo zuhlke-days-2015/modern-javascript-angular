@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Modern JavaScript Development</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://rawgit.com/zuhlke-days-2015/modern-javascript-styles/master/dist/css/style.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="https://rawgit.com/angular/bower-angular-route/master/angular-route.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/core/config.js"></script>
+    <script src="app/core/google-api.js"></script>
+    <script src="app/core/movie-api.js"></script>
+    <script src="app/search/search.js"></script>
+    <script src="app/search/search.route.js"></script>
+    <script src="app/movies/movies.js"></script>
+    <script src="app/movies/movies.route.js"></script>
+</head>
+
+<body ng-app="app">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/#/search">
+                    <img alt="Brand" src="https://rawgit.com/zuhlke-days-2015/modern-javascript-styles/master/dist/img/Popcorn.svg" width="90px" />
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Find a movie for your journey!</h2>
+            <p>It's easy, just enter your location and destination and we'll find you a movie that will save you from boredom.</p>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
+</body>
+
+</html>
