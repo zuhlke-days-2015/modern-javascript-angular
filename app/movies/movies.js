@@ -22,7 +22,7 @@
         function searchMovie(duration) {
             MovieApi.searchByDuration(duration)
                 .then(extractMovies)
-                .then(takeTop9)
+                .then(takeRandom9)
                 .then(addImageUrl)
                 .then(function (movies) {
                     vm.result = movies;
@@ -45,7 +45,8 @@
             });
         }
 
-        function takeTop9(movies) {
+        function takeRandom9(movies) {
+            movies.sort( function() { return 0.5 - Math.random() } );
             return movies.slice(0, 9);
         }
     }
