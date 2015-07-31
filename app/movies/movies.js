@@ -35,8 +35,8 @@
 
         function addImageUrl(movies) {
             return movies.map(function (movie) {
-                //movie.image = "http://img.omdbapi.com/?" + "i=" + movie.imdbID + "&apikey=" + MovieApi.apiKey;
-                movie.image = movie.poster;
+                movie.image = "http://img.omdbapi.com/?" + "i=" + movie.imdbID + "&apikey=" + MovieApi.apiKey;
+                //movie.image = movie.poster;
 
                 // http://www.imdb.com/title/{{vm.result[$index+1].imdbID}}
                 movie.imdbUrl = 'http://www.imdb.com/title/' + movie.imdbID;
