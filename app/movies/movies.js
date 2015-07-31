@@ -23,7 +23,7 @@
             MovieApi.searchByDuration(duration)
                 .then(extractMovies)
                 .then(takeRandom9)
-                .then(addImageUrl)
+                .then(enhanceImgUrlWithApiKey)
                 .then(function (movies) {
                     vm.result = movies;
                 });
@@ -33,14 +33,9 @@
             return result.data.movies;
         }
 
-        function addImageUrl(movies) {
+        function enhanceImgUrlWithApiKey(movies) {
             return movies.map(function (movie) {
-                movie.image = "http://img.omdbapi.com/?" + "i=" + movie.imdbID + "&apikey=" + MovieApi.apiKey;
-                //movie.image = movie.poster;
-
-                // http://www.imdb.com/title/{{vm.result[$index+1].imdbID}}
-                movie.imdbUrl = 'http://www.imdb.com/title/' + movie.imdbID;
-                
+                movie.omdbImgUrl = movie.omdbImgUrl + '&apikey=' + MovieApi.apiKey;
                 return movie;
             });
         }
