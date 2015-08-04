@@ -14,9 +14,9 @@
             }
         </style>
         <div class="movie" ng-repeat="movie in vm.result">
-            <div style="max-height: 200px; overflow: hidden">
+            <div style="max-width: 210px; max-height: 200px; overflow: hidden">
                 <a href="{{movie.imdbUrl}}">
-                    <img ng-src="{{movie.omdbImgUrl}}" alt="" />
+                    <img ng-src="{{movie.omdbImgUrl}}" alt="" onerror="this.src='http://placehold.it/210x200'" />
                 </a>
             </div>
             <h3>
