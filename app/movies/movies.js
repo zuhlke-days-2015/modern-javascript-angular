@@ -21,23 +21,10 @@
 
         function searchMovie(duration) {
             MovieApi.searchByDuration(duration)
-                .then(extractMovies)
                 .then(takeRandom9)
-                .then(enhanceImgUrlWithApiKey)
                 .then(function (movies) {
                     vm.result = movies;
                 });
-        }
-
-        function extractMovies(result) {
-            return result.data.movies;
-        }
-
-        function enhanceImgUrlWithApiKey(movies) {
-            return movies.map(function (movie) {
-                movie.omdbImgUrl = movie.omdbImgUrl + '&apikey=' + MovieApi.apiKey;
-                return movie;
-            });
         }
 
         function takeRandom9(movies) {
