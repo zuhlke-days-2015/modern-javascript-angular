@@ -1,0 +1,13 @@
+<figure class="movie__item__inner">
+	<div class="movie__item__inner__img">
+		<a href="{{ctrl.imdbUrl}}">
+			<img ng-src="{{ctrl.imageUrl}}" alt="" onerror="this.src='http://placehold.it/343x200'" />
+		</a>
+	</div>
+	<figcaption>
+		<h3><a href="{{ctrl.imdbUrl}}">{{ctrl.title}}</a>
+	</h3>
+		<p>Runtime {{ctrl.runtime}}
+			<br />IMDB Votes {{ctrl.rating}}</p>
+	</figcaption>
+</figure>

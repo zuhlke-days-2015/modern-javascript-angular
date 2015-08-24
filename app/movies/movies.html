@@ -1,19 +1,12 @@
 <div class="container">
     <ul class="movie">
-        <li class="movie__item" ng-repeat="movie in vm.result">
-            <figure class="movie__item__inner">
-                <div class="movie__item__inner__img">
-                    <a href="{{movie.imdbUrl}}">
-                        <img ng-src="{{movie.omdbImgUrl}}" alt="" onerror="this.src='http://placehold.it/343x200'" />
-                    </a>
-                </div>
-                <figcaption>
-                    <h3><a href="{{movie.imdbUrl}}">{{movie.title}}</a>
-                </h3>
-                    <p>Runtime {{movie.runtimeOriginal}}
-                        <br />IMDB Votes {{movie.imdbVotes}}</p>
-                </figcaption>
-            </figure>
-        </li>
+        <li class="movie__item"
+            ng-repeat="movie in vm.result"
+            data-movie-tile 
+            data-imdb-url="movie.imdbUrl"
+            data-imdb-rating="movie.imdbVotes"
+            data-image-url="movie.omdbImgUrl"
+            data-title="movie.title"
+            data-runtime="movie.runtimeOriginal"></li>
     </ul>
 </div>
